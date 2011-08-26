@@ -82,6 +82,7 @@
 						<int key="IBUISystemItemIdentifier">11</int>
 					</object>
 					<reference key="IBUIParentViewController" ref="796000109"/>
+					<string key="IBUINibName">BrowseView</string>
 					<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
 						<int key="IBUIInterfaceOrientation">1</int>
 						<int key="interfaceOrientation">1</int>
@@ -119,7 +120,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUIViewController" id="631528841">
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="61644213">
-									<reference key="IBUINavigationBar"/>
 									<string key="IBUITitle">Root View Controller</string>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
