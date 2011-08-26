@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchViewNavController.h"
 
 @interface riksdagenkontakterAppDelegate : NSObject <UIApplicationDelegate> {
-
+    UITabBarController *rootViewController;
+    SearchViewNavController *navController; 
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UITabBarController *rootController;
+@property (nonatomic, retain) IBOutlet SearchViewNavController *navController;
 
 @end

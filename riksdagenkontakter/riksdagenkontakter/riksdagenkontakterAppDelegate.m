@@ -1,21 +1,18 @@
-//
-//  riksdagenkontakterAppDelegate.m
-//  riksdagenkontakter
-//
-//  Created by Anders Ericsson on 2011-08-26.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "riksdagenkontakterAppDelegate.h"
+#import "SearchViewNavController.h"
 
 @implementation riksdagenkontakterAppDelegate
 
 
 @synthesize window=_window;
+@synthesize rootController;
+@synthesize navController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self.window addSubview: rootController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -61,8 +58,11 @@
 
 - (void)dealloc
 {
+    [rootController release];
+    [navController release];
     [_window release];
     [super dealloc];
 }
 
 @end
+
