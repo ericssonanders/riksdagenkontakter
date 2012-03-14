@@ -57,8 +57,8 @@
 		9ADEB5EE14083F9800E75A50 /* SearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ADEB5E814083F9800E75A50 /* SearchResultView.xib */; };
 		9ADEB5F0140840A600E75A50 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADEB5EF140840A600E75A50 /* SystemConfiguration.framework */; };
 		9ADEB5F2140840B200E75A50 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADEB5F1140840B200E75A50 /* MobileCoreServices.framework */; };
-		9ADEB5F4140840C100E75A50 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADEB5F3140840C100E75A50 /* libz.1.2.3.dylib */; };
 		9ADEB5F6140840CC00E75A50 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADEB5F5140840CC00E75A50 /* CFNetwork.framework */; };
+		E05958F015112212002F6AFA /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E05958EF15112212002F6AFA /* libz.1.2.5.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,8 +158,8 @@
 		9ADEB5E814083F9800E75A50 /* SearchResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultView.xib; sourceTree = "<group>"; };
 		9ADEB5EF140840A600E75A50 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9ADEB5F1140840B200E75A50 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		9ADEB5F3140840C100E75A50 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		9ADEB5F5140840CC00E75A50 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E05958EF15112212002F6AFA /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05958F015112212002F6AFA /* libz.1.2.5.dylib in Frameworks */,
 				9ADEB5F6140840CC00E75A50 /* CFNetwork.framework in Frameworks */,
-				9ADEB5F4140840C100E75A50 /* libz.1.2.3.dylib in Frameworks */,
 				9ADEB5F2140840B200E75A50 /* MobileCoreServices.framework in Frameworks */,
 				9ADEB5F0140840A600E75A50 /* SystemConfiguration.framework in Frameworks */,
 				9ADEB54A140839B500E75A50 /* UIKit.framework in Frameworks */,
@@ -183,6 +183,7 @@
 		9ADEB53A140839B500E75A50 = {
 			isa = PBXGroup;
 			children = (
+				E05958EF15112212002F6AFA /* libz.1.2.5.dylib */,
 				9ADEB54F140839B500E75A50 /* riksdagenkontakter */,
 				9ADEB548140839B500E75A50 /* Frameworks */,
 				9ADEB546140839B500E75A50 /* Products */,
@@ -200,7 +201,6 @@
 		9ADEB548140839B500E75A50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9ADEB5F3140840C100E75A50 /* libz.1.2.3.dylib */,
 				9ADEB5F1140840B200E75A50 /* MobileCoreServices.framework */,
 				9ADEB5EF140840A600E75A50 /* SystemConfiguration.framework */,
 				9ADEB5F5140840CC00E75A50 /* CFNetwork.framework */,
@@ -405,6 +405,9 @@
 /* Begin PBXProject section */
 		9ADEB53C140839B500E75A50 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 9ADEB53F140839B500E75A50 /* Build configuration list for PBXProject "riksdagenkontakter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -530,6 +533,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -547,6 +551,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "riksdagenkontakter/riksdagenkontakter-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "riksdagenkontakter/riksdagenkontakter-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -560,6 +565,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "riksdagenkontakter/riksdagenkontakter-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "riksdagenkontakter/riksdagenkontakter-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -586,6 +592,7 @@
 				9ADEB562140839B500E75A50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
